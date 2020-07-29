@@ -1,0 +1,15 @@
+ALTER TABLE `admin` ADD `saldo` INT(12) NULL AFTER `pesan_antar`;
+ALTER TABLE `dompet` CHANGE `pelanggan_id` `admin_id` INT(11) NULL DEFAULT NULL;
+ALTER TABLE `topup_saldo` ADD `update_by` INT NULL AFTER `metode_pembayaran`;
+ALTER TABLE `kios` ADD `provinsi` VARCHAR(250) NULL AFTER `trash`;
+ALTER TABLE `topup_saldo` CHANGE `sudah_bayar` `status` TINYINT(1) NOT NULL COMMENT '0:belum bayar, 1:sudah confirm, 2:approve,3:reject';
+ALTER TABLE `topup_saldo` ADD `file` TEXT NULL AFTER `update_by`;
+ALTER TABLE `dompet` ADD `saldo` FLOAT(10) NULL COMMENT 'saldo terakhir' AFTER `jenis`;
+___________[OK masuk dev]______________
+
+belum masuk ke prod
+ALTER TABLE `admin` ADD `reveral` VARCHAR(10) NULL AFTER `saldo`;
+
+
+buat api reveral dan diskon
+admin + kolom reveral

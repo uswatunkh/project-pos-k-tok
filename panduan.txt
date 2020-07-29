@@ -1,0 +1,12 @@
+1.edit codingan halaman auth di :
+nama_web/application/modules/frontend/pilih_folder_yang_mau_diedit
+
+2.cara nambah fungsi edit,tambah ataupun hapus tinggal buat fungsi dicontroller 
+folder yang dikerjakan, contoh penulisan codenya :
+public function input_toko(){
+		$data['content'] = 'input_toko';
+		$this->view($data,false);
+	}
+PENJELASAN CODE :
+-$data['content'] = 'input_toko'; => nama foldernya
+-$this->view($data,false); => berfungsi untuk memasukkan data controller ke view input_toko

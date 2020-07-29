@@ -1,0 +1,9 @@
+COMPONENT FIELD
+1. Radio, check box, combo box
+	* di isi dengan format "value,label"
+2. File
+	* type file di isi dengan format "type,type" misal "doc,csv,xls"
+	* File size di isi dengan format "minSize,maxSize" (px)
+3. Image 
+	* field type dan field size di isi dengan format sama seperti component file
+	* Thumbnail di isi dengan format "Height,Width" (px)
