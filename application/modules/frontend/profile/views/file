@@ -1,0 +1,458 @@
+  
+  
+  value=<?=$a_user['email']?>
+  <!-- Order Form Start-->
+          <?php 
+              $no = 1;
+              foreach($query->result() as $row){
+               echo "
+            <div class='row'>
+                <div class='col-lg-2'></div>
+                <form id='adminpro-order-form' class='adminpro-form'>
+                
+                    <div class='col-lg-6'>
+                        <div class='login-bg'>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <div class='logo'>
+                                        <a href='#'><img src='img/logo/logo.png' alt='' />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class='row'>
+                                <div class='col-lg-4'>
+                                    <div class='login-input-head'>
+                                        <p ><h4>Nama Pemilik</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                    
+                                        
+                                        <input type='text' id='nama' name='nama' class='form-control'   readonly>
+                                        <i class='fa fa-user login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-4'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Email Pemilik</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input class='form-control' type='email' id='email' name='email' value='".$row->email."'>
+                                        <i class='fa fa-envelope login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-4'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Alamat</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input type='text' id='alamat' name='alamat' class='form-control' value='".$row->alamat."'>
+                                        <i class='fa fa-phone login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-4'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Password</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input type='text' name='companyname' class='form-control' value='".$row->password."'>
+                                        <i class='fa fa-briefcase login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class='row'>
+                                <div class='col-lg-4'></div>
+                                <div class='col-lg-8'>
+                                    <div class='col-xs-4'>
+                                        <button type='submit'  class='btn btn-primary btn-block btn-flat'>EDIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                 </div>
+                </form>
+                
+            </div>
+            
+            ";
+            $no++;
+                     
+            }  
+            ?> 
+   
+    <!-- Order Form End-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <section class='col-lg-12 '>
+        <div class='box box-success'>        
+            <h4 class='box-title' style='font-weight:400;'><i class='fa fa-bar-chart'></i> Profile</h4> 
+                
+          <div class='box-body'>
+            <div class='box' >
+
+          <!-- Order Form Start-->
+          <?php
+          $query = $this->My_m->tampil_home();
+            foreach ($query->result() as $row) { echo"
+            <div class='row'>
+                <div class='col-lg-3'></div>
+                <form  method='post' action='<?php echo base_url(). 'Profile/add'; ?>'   >
+                <input type='hidden' id='id' name='id'>
+                    <div class='col-lg-6'>
+                        <div class='login-bg'>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <div class='logo'>
+                                        <a href='#'><img src='img/logo/logo.png' alt='' />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class='row'>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-head'>
+                                        <p ><h4>Nama Pemilik</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                    
+                                    
+                                        <input type='text' class='form-control' id='nama' name='nama' value=".$row->nama."  readonly>
+                                        <i class='fa fa-user login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Email Pemilik</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input class='form-control' type='email' id='email' name='email'  value=".$row->email.">
+                                        <i class='fa fa-envelope login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Alamat</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input type='text'  class='form-control' id='alamat' name='alamat' >
+                                        <i class='fa fa-phone login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class='row'>
+                                <div class='col-lg-2'></div>
+                                <div class='col-lg-8'>
+                                    <div class='col-xs-4'>
+                                    
+                                   
+                                    <a href ='#' class ='on-default edit-row btn btn-primary' data-toggle='modal' data-target='#custom-width-modal' onClick=\"SetInput('".$row->id."','".$row->nama."','".$row->email."','".$row->alamat."','".$row->password."')\"><i class ='fa fa-pencil'></i> Edit </a>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                   
+                 </div>
+                </form>
+                
+            </div>
+            ";
+            
+            }
+                                    
+                                     ?>
+            
+           
+   
+    <!-- Order Form End-->
+
+    
+    
+
+
+
+
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- start Edit Profil-->
+
+      
+      <div id='custom-width-modal' class='modal fade modal-primary' tabindex='-1' role='dialog' aria-labelledby='custom-width-modalLabel' aria-hidden='true' style='display: none;'>
+    <div class='modal-dialog' style='width:40%;'>
+        <div class='modal-content'>
+            
+        <form  method='post' action='<?php echo base_url(). 'Profile/login'; ?>' name='frmBerita' enctype='multipart/form-data'>  
+        
+        <div class='modal-body'>
+                        <div class='box-body'>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                               <!--     <div class='logo'>
+                                        <a href='<?php echo base_url(); ?>horizontal/#'><img src='<?php echo base_url(); ?>horizontal/img/logo/logo.png' alt='' />
+                                        </a>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <div class='login-title'>
+                                        <center><h1>Edit</h1></center>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class='row'>
+                                <div class='col-lg-4'>
+                                    <div class='login-input-head'>
+                                        <p><h4>Password</h4></p>
+                                    </div>
+                                </div>
+                                <div class='col-lg-8'>
+                                    <div class='login-input-area'>
+                                        <input class='form-control' type='text' id='password' name='password'  >
+                                        <i class='fa fa-briefcase login-user' aria-hidden='true'></i>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class='row'>
+                                <div class='col-lg-4'></div>
+                                <div class='col-lg-8'>
+                                <div class='modal-footer'>
+                <button type='button' class='btn btn-default waves-effect' data-dismiss='modal'>Tutup</button>
+                <button type='submit' class='btn btn-primary waves-effect waves-light'>Simpan</button>
+            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+            
+          
+
+<script type='text/javascript'>
+$(function () {
+
+});
+</script>
+
+
+
+
+<script type='text/javascript'>
+    function SetInput(id, nama, email, alamat,password){
+        document.getElementById('id').value = id;
+        document.getElementById('nama').value = nama;
+        document.getElementById('email').value = email;
+        document.getElementById('alamat').value = alamat;
+        document.getElementById('password').value = password;
+        
+    }
+   
+
+   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Profile extends MY_frontend{
+
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('My_m');
+		$this->load->library('form_validation');
+		//is_logged_in();
+	}
+
+	public function index(){
+
+	$data['title']= 'user';
+	$data['content'] = 'index';
+	$data['user']= $this->My_m->tampil_home('user', ['id' => 
+	$this->session->userdata('id')])->row_array();
+
+	$this->view($data,false);
+		
+	}
+
+	public function edit(){
+	
+		$data['title']= 'user';
+		$data['content'] = 'index';
+		$data['user']= $this->My_m->tampil_home('user', ['id' => 
+		$this->session->userdata('id')])->row_array();
+
+		$this->form_validation->set_rules('nama', 'email', 'alamat','password','required|trim');
+		$id = $this->input->post('id');
+		/*script untuk masukkan password sebelum edit profil*/ 
+
+		$password = $this->input->post('password');
+		
+		
+		if($this->form_validation->run() == false) {
+			$this->view($data,false);
+			$this->My_m->ubah_data(id);
+		}else {
+			echo"salahh";
+		/*	$this->session->set_flashdata('alert', '
+			(*Password Salah*)');
+			redirect('../project-pos-k-tok/profile');*/
+		}
+
+
+	/*
+	
+		$password = md5(md5($password));
+		$e = $this->My_m->cek_pwd($password, null);
+			if ($this->input->post('password')){
+			
+			$data['password'] = $this->input->post('password');
+		} else{
+		$this->session->set_flashdata('alertDua', 
+		'(*Silahkan Masukkan Password Terdahulu*)');
+		redirect('../project-pos-k-tok/profile');}*/
+
+		/*if(($e)&&($this->form_validation->run() == false)) {
+			$this->session->set_userdata('my_id', $e[0]);
+			$this->view($data,false);
+			$this->My_m->ubah_data(id);
+		}else {
+			
+			$this->session->set_flashdata('alert', '
+			(*Password Salah*)');
+			redirect('../project-pos-k-tok/profile');
+		}*/
+	
+		
+			
+		}
+
+	
+
+	
+
+}
