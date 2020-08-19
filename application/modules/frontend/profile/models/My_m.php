@@ -4,7 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class My_m extends CI_Model {	
 
     function tampil_home(){
-	
+	/*	$data = array(
+			'nama'=> $this->input->post('nama'),
+			'email'=> $this->input->post('email'),
+			
+			'alamat'=> $this->input->post('alamat'),
+			);
+			$this->session->set_userdata($data);
+		 return $this->db->get('user',$data);*/
+		   //mengambil data dari database
 		   return $this->db->get('user');
 	} 
 
@@ -27,9 +35,9 @@ class My_m extends CI_Model {
 		//$this->db->set('nama',$nama);
 	  // $this->db->where('id',$id);
 	  
-	  $this->db->where(array('id'=> $id));
+		
 	  $this->db->update('user',$data);
-	  
+	  $this->db->where(array('id'=> $id));
 		
 		
 

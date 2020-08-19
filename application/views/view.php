@@ -146,14 +146,14 @@
               <!-- Notifications: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="hidden-xs"><?=$a_user['nama']?></span>
+                  <span class="hidden-xs"><?=$user['nama']?></span>
                   <i class="fa  fa-chevron-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <p>
-                      <?=$a_user['nama']?>
+                      <?=$user['nama']?>
                       <!-- <small>Member since Nov. 2012</small> -->
                     </p>
                   </li>
